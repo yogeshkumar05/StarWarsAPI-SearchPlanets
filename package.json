@@ -1,0 +1,42 @@
+{
+  "name": "starwarsapi",
+  "version": "1.0.0",
+  "description": "Search Star wars planets using apis from https://swapi.co/",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --hot",
+    "postinstall": "webpack -p",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yogeshkumar05/StarWarsAPI-SearchPlanets.git"
+  },
+  "author": "Yogesh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yogeshkumar05/StarWarsAPI-SearchPlanets/issues"
+  },
+  "homepage": "https://github.com/yogeshkumar05/StarWarsAPI-SearchPlanets#readme",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "bootstrap": "^3.3.7",
+    "css-loader": "^0.28.7",
+    "node-sass": "^4.5.3",
+    "react": "^16.0.0",
+    "react-bootstrap": "^0.31.3",
+    "react-dom": "^16.0.0",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.0",
+    "url-loader": "^0.6.1",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.9.1"
+  }
+}

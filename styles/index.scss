@@ -1,0 +1,108 @@
+$main-color:#007fa3;
+.form-label
+{
+    font-size: 14px;
+    color:$main-color;
+    margin-bottom: 12px;
+}
+.col-4 {width: 33.33%;float: left}
+
+.form-input
+{
+    font-size: 16px;
+    border: 1px solid #979797;
+    width:100%;
+    height: 33px;
+    margin-bottom:20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    &:focus
+    {
+        border-radius: 0px
+    }
+}
+.form-button
+{
+    font-size: 18px;
+    background: $main-color;
+    color: white;
+    width:149px;
+    height: 44px;
+    border: none;
+    display: block;
+    border-radius:10px;
+}
+.headFootColors
+{
+    background:$main-color;
+    color: #fff;;
+}
+.header
+{
+    @extend .headFootColors;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 75px;
+    text-align: center; 
+}
+
+.login-page
+{
+    margin-top: 167px;
+    margin: 150px 35%;
+    width: 30%;
+}
+
+.planet-name{
+    font-size: 18px;
+    color: #e93939;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.planet-search
+{
+    margin-top: 100px;
+    .form-input
+    {
+        width:30%;
+    }
+    h3{
+        color: $main-color;
+        text-align: center;
+        margin-bottom: 12px;
+        margin-top: -10px
+    }
+}
+
+.render-planets
+{
+    background: #d8d8d8;
+    height: 520px;
+    overflow: auto;
+}
+
+.planet
+{
+    font-size: 30px;
+    background: #fff;
+    margin: 10px 5%;
+    padding: 5px;
+    color: #e93939;
+    display: inline-block;
+    width:40%;
+}
+.footer{
+    @extend .headFootColors;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+
+.no-planets
+{
+    text-align: center;
+    margin: 20% 0;
+}
