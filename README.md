@@ -13,7 +13,7 @@ Search for planets and lists them in components that are sized relative to their
 https://starwars-planetsearch.herokuapp.com/
 
 # Steps to run the project
-clone the repository
-execute npm install
-execute npm run dev
-launch http://localhost:1234/ in browser
+1. clone the repository
+2. execute npm install
+3. execute npm run dev
+4. launch http://localhost:1234/ in browser
