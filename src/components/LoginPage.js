@@ -47,7 +47,7 @@ class Login extends React.Component {
             alert(constants.INVALID_LOGIN);
         }
         else{
-            this.props.updateLogin(matched);
+            this.props.updateLogin(matched, this.state.name);
         }
     }
     render() {
@@ -56,7 +56,7 @@ class Login extends React.Component {
             <div className="form-label">{constants.USERNAME}</div>
             <input type="text" className="form-input" value={this.state.name} onChange={this.nameHandler} />
             <div className="form-label">{constants.PASSWORD}</div>
-            <input type="text" className="form-input" value={this.state.password} onChange={this.passwordHandler} />
+            <input type="password" className="form-input" value={this.state.password} onChange={this.passwordHandler} />
             <button className="form-button" onClick={this.validateLogin}>Login</button>
         </div>)
     }

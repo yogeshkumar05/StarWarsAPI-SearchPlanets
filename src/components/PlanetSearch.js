@@ -11,6 +11,8 @@ class PlanetSearch extends Component {
             searchQuery: "",
             planets: []
         }
+        this.searchCount=0;
+        this.startTime="";
 
         this.searchQueryHandler = this.searchQueryHandler.bind(this);
         this.sortPopulation = this.sortPopulation.bind(this);
@@ -31,7 +33,31 @@ class PlanetSearch extends Component {
 
     }
     callSearchAction() {
-        searchPlanet(this.state.searchQuery)
+        
+        let endTime="";
+        let seconds=0;
+
+        if(this.searchCount==0)
+        {
+            this.startTime=new Date();
+           
+        }
+        this.searchCount++;
+        if(this.searchCount==15)
+        {
+            endTime=new Date();
+            console.log(endTime)
+            seconds=(endTime.getTime()-this.startTime.getTime())/1000;
+        }
+        console.log(`seconds: ${seconds}
+        searchCount: ${this.searchCount}`)
+        if((seconds<=60 && this.searchCount<=15)|| this.props.user=="Luke Skywalker")
+            searchPlanet(this.state.searchQuery)
+        else
+        {
+            alert("Only User Luke Skywalker can perform more than 15 searches in a minute!! Logging Out...");
+            this.props.updateLogin(false);
+        }
     }
 
     componentWillReceiveProps(nextProps) {

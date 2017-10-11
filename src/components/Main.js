@@ -14,7 +14,8 @@ export default class Main extends Component {
         this.updateLogin = this.updateLogin.bind(this);
     }
 
-    updateLogin(value) {
+    updateLogin(value, user="") {
+        this.user=user;
         this.setState({ isLoginValid: value });
     }
 
@@ -26,7 +27,7 @@ export default class Main extends Component {
                     <Header />
                 </header>
                 <div className="container">
-                    {this.state.isLoginValid ? <PlanetSearch /> : <Login updateLogin={this.updateLogin} />}
+                    {this.state.isLoginValid ? <PlanetSearch user={this.user} updateLogin={this.updateLogin}/> : <Login updateLogin={this.updateLogin} />}
                 </div>
                 <Footer />
             </div>)
